@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Alternative Banking System.iml" filepath="$PROJECT_DIR$/Alternative Banking System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adminApp/adminApp.iml" filepath="$PROJECT_DIR$/adminApp/adminApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clientApp/clientApp.iml" filepath="$PROJECT_DIR$/clientApp/clientApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/engine/engine.iml" filepath="$PROJECT_DIR$/engine/engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webServer/webServer.iml" filepath="$PROJECT_DIR$/webServer/webServer.iml" />
+    </modules>
+  </component>
+</project>

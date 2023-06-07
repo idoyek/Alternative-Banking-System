@@ -1,0 +1,156 @@
+#mainBoarderPane{
+    -fx-background-color: #b7d7e8 ;
+}
+
+.button{
+    -fx-background-color: #87bdd8;
+    -fx-text-fill: #0F2662;
+    -fx-font-weight: bold;
+    -fx-border-color: #6287EA;
+}
+
+.label{
+    -fx-text-fill: #6287EA;
+    -fx-font-weight: bold;
+}
+
+.text-field{
+    -fx-background-color: #87bdd8;
+    -fx-text-fill: #0F2662;
+    -fx-font-weight: bold;
+}
+
+.table-view{
+    -fx-background-color: #87bdd8 ;
+    -fx-text-fill: #daebe8;
+    -fx-border-color: #6287EA;
+    -fx-selection-bar: #6287EA;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: #cfe0e8;
+}
+.table-row-cell:even{
+    -fx-background-color: #daebe8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: steelblue;
+}
+.table-row-cell:selected .text {
+    -fx-fill: white ;
+}
+
+.tab-header-background {
+    -fx-background-color: #87bdd8;
+}
+
+.tab{
+    -fx-background-color: #b7d7e8;
+}
+
+.tab:hover{
+    -fx-background-color: #6287EA;
+}
+
+.list-cell{
+    -fx-background-color: #cfe0e8;
+    -fx-text-fill: #0F2662;
+    -fx-font-weight: bold;
+    -fx-border-color: #6287EA;
+}
+
+.list-view{
+    -fx-background-color: #87bdd8;
+    -fx-text-fill: #0F2662;
+    -fx-border-color: #6287EA;
+    -fx-selection-bar: #6287EA;
+}
+.list-view .list-cell:selected{
+    -fx-background-color: steelblue;
+}
+.list-view .list-cell:selected .text {
+    -fx-fill: white ;
+}
+
+.table-view .column-header {
+    -fx-background-color: #6287EA;
+}
+
+/** color the arrow */
+.table-view .column-header .arrow {
+    -fx-background-color: black;
+}
+
+/** color the column header text */
+.table-view .column-header .label {
+    -fx-text-fill: #87bdd8;
+}
+
+/** add slight dividers between headers */
+.table-view .column-header {
+    -fx-border-color: white;
+    -fx-border-width: .1
+}
+
+/** color the scroll bar background and thumb */
+.table-view .scroll-bar {
+    -fx-background-color: white;
+}
+.table-view .scroll-bar .thumb {
+    -fx-background-color: #6287EA;
+}
+
+.combo-box{
+    -fx-background-color: #6287EA;
+    -fx-font-weight: bold;
+}
+.combo-box-popup .list-view .list-cell:hover{
+    -fx-background-color: #6287EA;
+}
+
+.text-area {
+    text-area-background: #87bdd8;
+    -fx-text-fill: #0F2662;
+    -fx-font-weight: bold;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background;
+}
+
+#helloUserLabel {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18px;
+}
+
+#userNameLabel {
+    -fx-font-size: 18px;
+}
+
+#absLabel {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+#chatUsersLabel {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+#mainChatLinesTextArea {
+    -fx-font-size: 14px;
+}
+
+#chatLineTextArea {
+    -fx-font-size: 14px;
+}
+
+#rewindModeLabel {
+    -fx-font-size: 20px;
+}
+
+#userGreetingLabel {
+    -fx-font-size: 16px;
+}

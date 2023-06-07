@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="600.0" stylesheets="@loansTableView.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableViews.LoansInformationController">
+   <children>
+      <TableView fx:id="tableViewWindow" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="135.0" prefWidth="362.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="loanID" minWidth="120.0" prefWidth="133.0" text="Loan ID" />
+          <TableColumn fx:id="loanerName" minWidth="120.0" prefWidth="94.66668701171875" text="Loaner name" />
+            <TableColumn fx:id="loanCategory" minWidth="120.0" prefWidth="94.66668701171875" text="Loan category" />
+            <TableColumn fx:id="totalAmount" minWidth="120.0" prefWidth="94.66668701171875" text="Total amount" />
+            <TableColumn fx:id="totalTime" minWidth="120.0" prefWidth="94.66668701171875" text="Total time" />
+            <TableColumn fx:id="interest" minWidth="120.0" prefWidth="94.66668701171875" text="Interest" />
+            <TableColumn fx:id="paymentTimeRate" minWidth="120.0" prefWidth="94.66668701171875" text="Payment time rate" />
+            <TableColumn fx:id="status" minWidth="120.0" prefWidth="94.66668701171875" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

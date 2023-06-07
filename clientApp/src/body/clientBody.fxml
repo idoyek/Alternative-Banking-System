@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="572.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="body.CustomerBodyController">
+   <center>
+      <TabPane fx:id="clientsTabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="1250.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="informationTab" text="Information">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="1250.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="354.0" prefWidth="577.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="loansInformationLabel" alignment="CENTER" contentDisplay="CENTER" text="Loaner Loans" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <fx:include fx:id="loanerLoansInformation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="../tableViews/loansInformation.fxml" />
+                              <Label fx:id="loansInformationLabel1" alignment="CENTER" contentDisplay="CENTER" text="Lender Loans" textAlignment="CENTER" />
+                              <fx:include fx:id="investorLoansInformation" source="../tableViews/loansInformation.fxml" />
+                              <HBox alignment="CENTER" prefHeight="28.0" prefWidth="800.0">
+                                 <children>
+                                    <Button fx:id="saleLoanButton" mnemonicParsing="false" onAction="#activateSaleLoanButton" text="Sale loan">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label fx:id="loanIsAlreadyInListLabel" prefHeight="17.0" prefWidth="192.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <Label layoutX="829.0" layoutY="6.0" text="Transactions" />
+                        <AnchorPane layoutX="641.0" layoutY="30.0" prefHeight="122.0" prefWidth="580.0">
+                           <children>
+                              <fx:include fx:id="transactionsInformation" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" source="../tableViews/transactions.fxml" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="loansInformationLabel13" alignment="CENTER" contentDisplay="CENTER" layoutX="895.0" layoutY="163.0" text="Loans for sale" textAlignment="CENTER" />
+                        <VBox layoutX="640.0" layoutY="190.0" prefHeight="107.0" prefWidth="752.0">
+                           <children>
+                              <AnchorPane prefHeight="132.0" prefWidth="608.0">
+                                 <children>
+                                    <fx:include fx:id="loansForSaleInformation" source="../tableViews/loansInformation.fxml" />
+                                    <HBox alignment="CENTER" layoutY="139.0" prefHeight="32.0" prefWidth="679.0">
+                                       <children>
+                                          <Button fx:id="buyLoanButton" mnemonicParsing="false" onAction="#activateBuyLoanButton" text="Buy Loan">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Label fx:id="currentCustomerOwnLoanLabel" prefHeight="17.0" prefWidth="192.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="addLoanTab" text="Add Loan">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="loadLoansButton" layoutX="277.0" layoutY="40.0" mnemonicParsing="false" onAction="#activateLoadLoansButton" prefHeight="37.0" prefWidth="113.0" text="Load Loans File" />
+                        <Label fx:id="loanIdLabel" layoutX="60.0" layoutY="170.0" text="Loan Id: " AnchorPane.leftAnchor="60.0" />
+                        <Label fx:id="totalYazTimeLabel" layoutX="469.0" layoutY="170.0" text="Total Yaz Time: " AnchorPane.leftAnchor="469.0" />
+                        <Label fx:id="totalSumOfLoanLabel" layoutX="60.0" layoutY="260.0" text="Total Sum Of Loan: " AnchorPane.leftAnchor="60.0" />
+                        <Label fx:id="loanGoalLabel" layoutX="60.0" layoutY="215.0" text="Loan Goal: " AnchorPane.leftAnchor="60.0" />
+                        <Label fx:id="paysEveryYazLabel" layoutX="469.0" layoutY="260.0" text="Pays Every Yaz: " AnchorPane.leftAnchor="469.0" />
+                        <Label fx:id="interestPerPaymentLabel" layoutX="469.0" layoutY="215.0" text="Interest Per Payment: " AnchorPane.leftAnchor="469.0" />
+                        <TextField fx:id="loanIdTextField" layoutX="245.0" layoutY="164.0" onAction="#activateLoanIdTextField" />
+                        <TextField fx:id="loanGoalTextField" layoutX="245.0" layoutY="208.0" onAction="#activateLoanGoalTextField" />
+                        <TextField fx:id="totalSumOfLoanTextField" layoutX="245.0" layoutY="253.0" onAction="#activateTotalSumOfLoanTextField" />
+                        <TextField fx:id="paysEveryYazTextField" layoutX="680.0" layoutY="253.0" onAction="#activatePaysEveryYazTextField" />
+                        <TextField fx:id="interestPerPaymentTextField" layoutX="680.0" layoutY="208.0" onAction="#activateInterestPerPaymentTextField" />
+                        <TextField fx:id="totalYazTimeTextField" layoutX="680.0" layoutY="166.0" onAction="#activateTotalYazTimeTextField" />
+                        <Button fx:id="uploadLoanButton" layoutX="383.0" layoutY="296.0" mnemonicParsing="false" onAction="#activateUploadLoanButton" prefHeight="42.0" prefWidth="115.0" text="Upload Loan" />
+                        <Label layoutX="378.0" layoutY="114.0" text="Upload Loan Manually :" />
+                        <Label layoutX="57.0" layoutY="50.0" text="Upload Loan Via XML File :" />
+                        <Label fx:id="invalidXmlFileLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="94.0" prefHeight="17.0" prefWidth="537.0" textAlignment="CENTER" />
+                        <Label fx:id="invalidManuallyLoanLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="346.0" prefHeight="17.0" prefWidth="537.0" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="scrambleTab" text="Scramble">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="amountToInvestTextField" layoutX="14.0" layoutY="28.0" onAction="#activateAmountToInvestTextField" prefHeight="0.0" prefWidth="100.0" />
+                        <TextField fx:id="minimumInterestTextField" layoutX="14.0" layoutY="91.0" onAction="#activateMinimumInterestTextField" prefWidth="100.0" />
+                        <TextField fx:id="minimumYazTextField" layoutX="14.0" layoutY="153.0" onAction="#activateMinimumYazTextField" prefWidth="100.0" />
+                        <Label layoutX="17.0" layoutY="8.0" text="Amount to invest:" />
+                        <Label layoutX="189.0" layoutY="8.0" text="Choose categories" />
+                        <Label layoutX="32.0" layoutY="70.0" text="Min interest" />
+                        <Label layoutX="43.0" layoutY="133.0" text="Min Yaz" />
+                        <Button fx:id="activateScrambleButton" layoutX="1033.0" layoutY="212.0" mnemonicParsing="false" onAction="#activateActivateScrambleButton" prefHeight="58.0" prefWidth="152.0" text="Activate" />
+                        <ScrollPane layoutX="176.0" layoutY="29.0" prefHeight="150.0" prefWidth="124.0">
+                           <content>
+                              <ListView fx:id="categoriesOptionsListView" prefHeight="147.0" prefWidth="121.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="forwardCategoriesButton" layoutX="322.0" layoutY="66.0" mnemonicParsing="false" onAction="#activateForwardCategoriesButton" text="&gt;&gt;" />
+                        <ScrollPane layoutX="376.0" layoutY="30.0" prefHeight="149.0" prefWidth="123.0">
+                           <content>
+                              <ListView fx:id="userChoiceCategoriesListView" prefHeight="146.0" prefWidth="120.0" />
+                           </content>
+                        </ScrollPane>
+                        <Button fx:id="showRelevantLoansListButton" layoutX="567.0" layoutY="84.0" mnemonicParsing="false" onAction="#activateShowRelevantLoansListButton" prefHeight="41.0" prefWidth="179.0" text="Show Relevant Loans" />
+                        <BorderPane layoutX="167.0" layoutY="211.0" prefHeight="126.0" prefWidth="800.0">
+                           <top>
+                              <fx:include fx:id="relevantLoans" source="../tableViews/loansInformation.fxml" />
+                           </top>
+                        </BorderPane>
+                        <Label layoutX="515.0" layoutY="189.0" text="Relevant Loans:" />
+                        <Label layoutX="22.0" layoutY="203.0" text="Max open loans" />
+                        <TextField fx:id="maxOpenLoansTextField" layoutX="14.0" layoutY="228.0" onAction="#activateMaxOpenLoansTextField" prefWidth="100.0" />
+                        <Label layoutX="13.0" layoutY="270.0" text="Max ownership (%)" />
+                        <TextField fx:id="maxOwnershipTextField" layoutX="15.0" layoutY="298.0" onAction="#activateMaxOwnershipTextField" prefWidth="100.0" />
+                        <Label fx:id="amountToInvestLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="834.0" layoutY="178.0" prefHeight="17.0" prefWidth="402.0" textAlignment="CENTER" />
+                        <Label fx:id="minInterestLabel" layoutX="50.0" layoutY="116.0" />
+                        <Label fx:id="minYazLabel" layoutX="50.0" layoutY="178.0" />
+                        <Label fx:id="maxOpenLoansLabel" layoutX="183.0" layoutY="53.0" />
+                        <Label fx:id="maxOwnershipLabel" layoutX="184.0" layoutY="116.0" />
+                        <Label fx:id="totalRelevantLoansLabel" layoutX="389.0" layoutY="282.0" prefHeight="17.0" prefWidth="0.0" />
+                        <Button fx:id="backwardCategoriesButton" layoutX="322.0" layoutY="121.0" mnemonicParsing="false" onAction="#activateBackwardCategoriesButton" text="&lt;&lt;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="paymentTab" text="Payment">
+              <content>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="568.0" prefWidth="1151.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="148.0" prefWidth="362.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="loansInformationLabel1" alignment="CENTER" contentDisplay="CENTER" text="Loaner Loans" textAlignment="CENTER" />
+                              <fx:include fx:id="loanerLoans" source="../tableViews/loansInformation.fxml" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <ScrollPane layoutX="656.0" layoutY="55.0" prefHeight="204.0" prefWidth="202.0">
+                           <content>
+                              <ListView fx:id="notificationsListView" prefHeight="202.0" prefWidth="200.0" />
+                           </content>
+                        </ScrollPane>
+                        <Label fx:id="loansInformationLabel12" alignment="CENTER" contentDisplay="CENTER" layoutX="723.0" layoutY="27.0" text="Notifications" textAlignment="CENTER" />
+                        <Label fx:id="loansInformationLabel11" alignment="CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="205.0" text="Paymant Controls" textAlignment="CENTER" />
+                        <Button fx:id="payLoanSinglePaymentButton" layoutX="241.0" layoutY="241.0" mnemonicParsing="false" onAction="#activatePayLoanSinglePaymentButton" prefHeight="45.0" prefWidth="200.0" text="Pay Loan/s Single Payment" />
+                        <Button fx:id="closeEntireLoanButton" layoutX="21.0" layoutY="241.0" mnemonicParsing="false" onAction="#activateCloseEntireLoanButton" prefHeight="45.0" prefWidth="200.0" text="Close Entire Loan/s" />
+                        <TextField fx:id="payLoanSinglePaymentTextField" layoutX="286.0" layoutY="298.0" onAction="#activatePayLoanSinglePaymentTextField" prefHeight="25.0" prefWidth="110.0" />
+                        <Label fx:id="paymentLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="104.0" layoutY="329.0" prefHeight="17.0" prefWidth="475.0" textAlignment="CENTER" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <fx:include fx:id="chat" source="../chat/main-chat.fxml" />
+   </bottom>
+</BorderPane>

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="clientApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/clientApp_jar</output-path>
+    <root id="root">
+      <element id="archive" name="clientApp.jar">
+        <element id="module-output" name="clientApp" />
+        <element id="module-output" name="engine" />
+      </element>
+      <element id="library" level="project" name="gson-2.8" />
+      <element id="library" level="project" name="okHttp" />
+    </root>
+  </artifact>
+</component>
